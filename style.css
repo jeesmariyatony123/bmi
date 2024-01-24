@@ -3,12 +3,15 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
@@ -40,7 +43,7 @@ header a {
 
 /* carousel */
 .carousel {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     overflow: hidden;
     margin-top: -50px;
@@ -351,12 +354,33 @@ header a {
 }
 
 /* section 2 */
+#about {
+    /* display: flex; */
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: -200px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+
+}
+
 #card {
     box-sizing: border-box;
     transition: all 0.35s linear;
-margin-right: -20px;
+    margin-right: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    width: 100%;
+    background-color: #0c0c0c;
+    padding-top: 130px;
 }
 
+/* 
 section {
 
     display: flex;
@@ -364,12 +388,14 @@ section {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
-    background-color: #424242;
-}
+    background-color: #0c0c0c;
+    padding-top: 130px;
 
-.card {
+} */
+
+#card .card {
     --color: #ff88a6;
     --border-size: 1rem;
     --bg-color: #252525;
@@ -386,13 +412,13 @@ section {
     overflow: hidden;
 }
 
-.card::before,
-.card::after {
+#card .card::before,
+#card .card::after {
     content: "";
     position: absolute;
 }
 
-.card::before {
+#card .card::before {
     width: 200%;
     height: 200%;
     background-image: conic-gradient(var(--color) 0deg,
@@ -405,7 +431,7 @@ section {
     animation: border 8s linear infinite;
 }
 
-.card:hover::before {
+#card .card:hover::before {
     animation-play-state: paused;
 }
 
@@ -415,7 +441,7 @@ section {
     }
 }
 
-.card::after {
+#card .card::after {
     --inset: 0.25rem;
     background-color: #111;
     inset: var(--inset);
@@ -424,11 +450,11 @@ section {
     transition: all 0.35s linear;
 }
 
-.card:hover::after {
+#card .card:hover::after {
     background-color: var(--bg-color);
 }
 
-.card i {
+#card .card i {
     font-size: 4rem;
     margin-inline: auto;
     color: transparent;
@@ -436,13 +462,89 @@ section {
     color: #eee;
 }
 
-.card:hover i {
+#card .card:hover i {
     color: var(--color);
     -webkit-text-stroke-width: 0;
 }
-.card .detail {
+
+#card .card .detail {
     line-height: 1.5rem;
     text-align: center;
     opacity: 0.75;
     color: white;
+}
+
+
+/* bmi */
+#bmi img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+}
+
+/* cards */
+#classes{
+   background-color: rgb(229, 226, 226);
+    height: 100vh;
+}
+ .cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .card{
+    margin: 0.5em;
+    /* width: calc(100%/3); */
+}
+ .image-wrapper{
+    height: 14vw;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin: 0 auto;
+}
+
+ .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+}
+
+
+#classes .card {
+    height: 60vh;
+    width: 20vw;
+    margin: 0 1em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+}
+
+#classes .carousel-inner {
+    padding: 1em;
+}
+#classes .carousel-control-prev{
+    margin-left:10vw ;
+}
+#classes .carousel-control-next{
+    margin-right:10vw ;
+}
+
+#classes .carousel-control-prev,
+#classes .carousel-control-next {
+    background-color: #e1e1e1;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 25%;
+    transform: translateY(-50%);
+    
+}
+
+@media (min-width: 768px) {
+    #classes .card img {
+        height: 11em;
+    }
 }

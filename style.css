@@ -15,31 +15,35 @@ body {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
-    color: #eee;
+    /* color: #eee; */
     margin: 0;
     font-size: 12px;
 }
 
-a {
-    text-decoration: none;
-    color: #eee;
-}
-
-header {
-    width: 1140px;
-    max-width: 80%;
-    margin: auto;
-    height: 50px;
-    display: flex;
-    align-items: center;
-
-    position: relative;
+nav {
+    width: 100%;
+    background-color: #d2d2d2;
+    height: 80px;
     z-index: 100;
+    margin: -5px;
+    align-items: center;
 }
 
-header a {
-    margin-right: 40px;
+nav a {
+    text-decoration: none;
+    height: 10px;
 }
+
+.nav-link{
+    --bs-nav-link-color: rgb(224, 223, 223);
+}
+
+.nav-link:hover {
+    --bs-nav-link-color: #e20b0b;
+    --bs-nav-link-hover-color: rgb(218, 42, 42);
+}
+
+
 
 /* carousel */
 .carousel {
@@ -236,7 +240,7 @@ header a {
     left: 50%;
     bottom: 50px;
     border-radius: 20px;
-    animation: showImage .5s linear 1 forwards;
+    animation: showImage 0.5s linear 1 forwards;
 }
 
 @keyframes showImage {
@@ -478,12 +482,163 @@ section {
     color: white;
 }
 
+/* bmi calculator */
+
+:root {
+    --tyrian-purple: #501537;
+    --orange: #be3c30;
+}
+
+.bmihead {
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+}
 
 #bmi {
     background-image: url(https://hips.hearstapps.com/hmg-prod/images/dumbbells-gym-64a3f4bc2fe31.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.9);
+    height: 120vh;
+}
 
+#bmi .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -90px;
+}
+
+.main-wrapper {
+    max-width: 1080px;
+    background: #fff;
+    width: 480px;
+    height: 650px;
+}
+
+.bmi-heads {
+    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.bmi-heads .bmi-head {
+    padding: 1rem 1.6rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.active-head {
+    background: #000;
+}
+
+.bmi-content {
+    padding: 2rem;
+}
+
+.form-group {
+    padding: 0.55rem 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+
+.line {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+}
+
+.form-control {
+    width: 100%;
+    font-size: 1.15rem;
+    font-family: inherit;
+    padding: 0.6rem 1.2rem;
+    margin: 0.2rem 0;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    outline: 0;
+}
+
+.form-control::placeholder {
+    text-align: right;
+    opacity: 0.6;
+}
+
+.btns {
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns .btn {
+    width: 140px;
+    margin: 0 0.5rem;
+    padding: 0.8rem 0;
+    font-family: inherit;
+    font-size: 1.15rem;
+    border: none;
+    /* background: var(--orange); */
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    letter-spacing: 0.5px;
+    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+}
+
+.btns .btn:hover {
+    outline: 0;
+    opacity: 0.9;
+}
+
+.btns .btn:focus {
+    outline: 0;
+}
+
+#bmi-usc,
+#bmi-si {
+    display: none;
+}
+
+/* js related */
+.show-bmi {
+    display: block !important;
+}
+
+.alert-error {
+    text-align: center;
+    padding: 1rem 1.6rem 0;
+    color: var(--orange);
+    display: none;
+}
+
+.bmi-output {
+    padding: 1rem 1.6rem;
+    text-align: center;
+}
+
+#bmi-value {
+    padding-bottom: 0.4rem;
+}
+
+#bmi-category {
+    color: var(--orange);
+}
+
+#bmi-gender {
+    text-transform: capitalize;
 }
 
 .bmitext {
@@ -861,7 +1016,7 @@ img {
 
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(-180deg, #8d1e05,#f99a64);
+    background-image: linear-gradient(-180deg, #8d1e05, #f99a64);
 }
 
 /* CSS */
@@ -895,7 +1050,7 @@ img {
 
 .button-42:hover {
     /* box-shadow: rgba(3, 3, 3, 0.5) 0 4px 9px; */
-    background-image: linear-gradient(-180deg, #E62C03,#FF7E31);
+    background-image: linear-gradient(-180deg, #E62C03, #FF7E31);
 }
 
 /* contact */

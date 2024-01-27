@@ -25,60 +25,48 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg bg-body-dark bg-dark" >
+    <div class="container-fluid">
+      <img style="width:80px; margin-left:100px ;"
+        src="./images/canva-brown-abstract-barbell-fitness-gym-logo-sBj0LOFPAqA-removebg-preview.png" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link active text-danger fw-bold pe-4" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  fw-bold  pe-4" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold pe-4" href="#bmi">BMI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  fw-bold pe-4" href="#classes">Classes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  fw-bold pe-4" href="#testimonial">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  fw-bold pe-4" href="#trainer">Trainers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  fw-bold pe-4" href="#contact">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
   <!-- Navbar -->
   <div>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong pt-5">
-        <!-- Container wrapper -->
-        <div class="container">
-          <!-- Navbar brand -->
-          <a class="navbar-brand" href="#">Brand</a>
-
-          <!-- Toggle button -->
-          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-
-          <!-- Collapsible wrapper -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
-              <li class="nav-item">
-                <a class="nav-link active text-danger fw-bold" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#">BMI</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#">Classes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#">Testimonials</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#">Trainers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#">Contact</a>
-              </li>
-
-            </ul>
-            <!-- Left links -->
-          </div>
-          <!-- Collapsible wrapper -->
-        </div>
-        <!-- Container wrapper -->
-      </nav>
-    </header>
-    <!-- Navbar -->
 
     <!-- carousel -->
-    <div class="carousel next ">
+    <div class="carousel next mt-1">
       <div class="list">
         <div class="item">
           <img class="img-fluid"
@@ -225,73 +213,107 @@
 
 
   <section id="bmi">
-    <div class="container ">
-      <div class="row justify-content-center">
-        <div class="col-lg-5 col-md-7 mt-5 mb-5">
-          <div class="bmitext text-start mt-5 justify-content-center align-items-center">
-            <div style="color: #E62C03;">Body Mass Index</div>
-            <div style="font-size: 60px; color: white;">What is BMI?</div>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas tenetur quo, quas recusandae labore
-              minus quia vel repudiandae libero perferendis assumenda dolorem, dignissimos saepe, tempora ullam at quod
-              magni. Quia.</P>
+    <h1 class="bmihead pb-5 mb-5 text-dark">Calculate your BMI</h1>
+
+    <div class="container">
+      <div class="main-wrapper">
+        <div class="bmi-heads">
+          <div id="bmi-usc-head" class="bmi-head active-head">
+            <h2>US Units</h2>
+          </div>
+          <div id="bmi-si-head" class="bmi-head">
+            <h2>Metric Units</h2>
           </div>
         </div>
-        <div class="col-lg-5 col-md-7 mb-5 mt-5 bg-dark  ">
-          <div class="card mt-5 border-0">
-            <div class="card-header bg-dark text-center text-light">
-              <h1>Calculate your BMI</h1>
-            </div>
-            <div class="card-body text-light bg-dark border-top">
-              <form action="">
-                <div class="form-group">
-                  <label for="" class="font-weight-bold pb-2">Height (CM):</label>
-                  <input type="text" name="" id="height" class="form-control" placeholder="Enter height">
-                </div>
-                <div class="form-group pt-5">
-                  <label for="" class="font-weight-bold pb-2">Weight (KG):</label>
-                  <input type="text" name="" id="weight" class="form-control" placeholder="Enter weight">
-                </div>
-                <div class="form-group text-center mt-4">
-                  <button class="btn button-42 text-light">Calculate</button>
-                </div>
-              </form>
 
+        <div class="bmi-contents">
+          <!-- bmi us units -->
+          <div class="bmi-content" id="bmi-usc">
+            <form>
+              <div class="form-group">
+                <p>Age</p>
+                <input type="text" class="form-control" placeholder="2 - 120" id="age1">
+              </div>
 
-              <div class="row">
-                <div class="col-12 mt-4 text-center">
-                  <h4>Result: <span id="results">0</span></h4>
+              <div class="form-group line">
+                <p>Gender</p>
+                <div>
+                  <input type="radio" name="gender" id="male" value="male" checked>
+                  <label for="male">Male</label>
+                </div>
+                <div>
+                  <input type="radio" name="gender" id="female" value="female">
+                  <label for="female">Female</label>
+                </div>
+              </div>
+              <div class="form-group line">
+                <p>Height</p>
+                <input type="text" class="form-control" id="feet" placeholder="feet">
+                <input type="text" class="form-control" id="inches" placeholder="inches">
+
+              </div>
+
+              <div class="form-group">
+                <p>Weight</p>
+                <input type="text" class="form-control" id="pounds" placeholder="pounds">
+              </div>
+            </form>
+          </div>
+
+          <!-- bmi metric units -->
+          <div class="bmi-content" id="bmi-si">
+            <form>
+              <div class="form-group">
+                <p>Age</p>
+                <input type="text" class="form-control" placeholder="2 - 120" id="age2">
+              </div>
+
+              <div class="form-group line">
+                <p>Gender</p>
+                <div>
+                  <input type="radio" name="gender" id="male" value="male" checked>
+                  <label for="male">Male</label>
+                </div>
+
+                <div>
+                  <input type="radio" name="gender" id="female" value="female">
+                  <label for="female">Female</label>
                 </div>
               </div>
 
-
-              <div class="row">
-                <div class="col-12 mt-4 text-left">
-                  <h6 class="mb-3 text-success"><strong>BMI Weight Guide</strong></h6>
-
-
-                  <p class="m-0"><strong>Under Weight:</strong> Less Than 18.6</p>
-                  <p class="m-0"><strong>Normal Weight:</strong> 18.6 to 24.9</p>
-                  <p class="m-0"><strong>Over Weight:</strong> Greater Than 24.9</p>
-                </div>
+              <div class="form-group">
+                <p>Height</p>
+                <input type="text" class="form-control" id="cm" placeholder="cm">
               </div>
-            </div>
-          </div>
 
+              <div class="form-group">
+                <p>Weight</p>
+                <input type="text" class="form-control" id="kg" placeholder="kg">
+              </div>
+            </form>
+          </div>
         </div>
 
+        <div class="btns">
+          <button type="button" id="calc-btn" class="btn">Calculate</button>
+          <button type="button" id="clr-btn" class="btn">Clear</button>
+        </div>
+
+        <div class="output">
+          <span class="alert-error">Some input are invalid!</span>
+          <div class="bmi-output">
+            <h3 id="bmi-value"></h3>
+            <p id="bmi-category"></p>
+            <p id="bmi-gender"></p>
+          </div>
+        </div>
       </div>
-
     </div>
-
-    <!-- Bootstrap Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
 
   </section>
 
   <section id="classes">
-    <h1 class="heading" class="pb-5 mb-5 text-light">CLASSES</h1>
+    <h1 class="heading pb-5 mb-5 text-light">CLASSES</h1>
     <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide px-5 text-center" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -507,7 +529,8 @@
               <i class="fa-brands fa-facebook fa-2x pe-3"></i>
               <i class="fa-brands fa-instagram fa-2x pe-3"></i>
               <i class="fa-brands fa-twitter fa-2x pe-3"></i>
-            </a>          </div>
+            </a>
+          </div>
         </article>
         <article class="card__article">
           <img style="height: 280px;"
@@ -520,7 +543,8 @@
               <i class="fa-brands fa-facebook fa-2x pe-3"></i>
               <i class="fa-brands fa-instagram fa-2x pe-3"></i>
               <i class="fa-brands fa-twitter fa-2x pe-3"></i>
-            </a>              </div>
+            </a>
+          </div>
         </article>
       </div>
     </div>
@@ -581,10 +605,10 @@
       </div>
       <div class="footerNav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">BMI</a></li>
-          <li><a href="#">Classes</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#bmi">BMI</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
